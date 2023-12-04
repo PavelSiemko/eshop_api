@@ -3,10 +3,10 @@ using Microsoft.AspNetCore.Mvc;
 namespace Eshop.Controllers
 {
     [ApiController]
-    [Route("v1/[controller]")]
+    [Route("[controller]")]
+    [ApiExplorerSettings(GroupName = "v1")]
     public class IsAliveController : ControllerBase
     {
-
         private readonly ILogger<IsAliveController> _logger;
 
         public IsAliveController(ILogger<IsAliveController> logger)
@@ -15,7 +15,7 @@ namespace Eshop.Controllers
         }
 
         [HttpGet(Name = "IsAlive")]
-        public bool Get()
+        public bool GetIsAlive()
         {
             return true;
         }
