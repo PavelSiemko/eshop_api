@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Eshop.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("v1/[controller]")]
     public class IsAliveController : ControllerBase
     {
 
